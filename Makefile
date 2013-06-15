@@ -5,12 +5,15 @@ SDIR=src
 CC=gcc
 GFLAGS=-I.$(IDIR)
 
-DEPS=src/lightsaber.h src/debug.h src/sorting/insertion.h
+SORTDEPS=src/sorting/insertion.h src/sorting/merge.h
+
+DEPS=src/lightsaber.h src/debug.h $(SORTDEPS)
 #DEPS=$(patsubst %,$(IDIR)/%, $(_DEPS))
 
 OBJ=src/main.c \
 		src/debug.c \
-		src/sorting/insertion.o
+		src/sorting/insertion.o \
+		src/sorting/merge.o
 #OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 %.o: %.c $(DEPS)
