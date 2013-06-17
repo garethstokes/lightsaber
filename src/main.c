@@ -2,6 +2,7 @@
 #include "sorting/insertion.h"
 #include "sorting/merge.h"
 #include "sorting/bubble.h"
+#include "sorting/heap.h"
 
 int main() {
   int i = 0;
@@ -10,9 +11,21 @@ int main() {
   /* int numbers[] = { 4, 7, 9, 2, 5, 1, 8, 6 }; */
   int numbers[] = { 5, 1, 8, 6, 4, 7, 9, 2, 3 };
 
-  /* insertion_sort(numbers, 9); */
+  /* 
+    params
+      1) the unsorted array
+      2) the length of array
+  */
+    insertion_sort(numbers, 9); 
   /* merge_sort(numbers, 9, 0, 8); */
-  bubble_sort( numbers, 9 );
+  /* bubble_sort( numbers, 9 ); */
+
+  /* params
+      1) the unsorted array
+      2) the length of the array
+      3) the size of the heap
+  heap_sort( numbers, 9, 9 );
+  */
 
   return(0);
 }

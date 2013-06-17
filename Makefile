@@ -5,7 +5,10 @@ SDIR=src
 CC=gcc
 GFLAGS=-I.$(IDIR)
 
-SORTDEPS=src/sorting/insertion.h src/sorting/merge.h src/sorting/bubble.h
+SORTDEPS=src/sorting/insertion.h \
+	src/sorting/merge.h \
+	src/sorting/bubble.h \
+	src/sorting/heap.h
 
 DEPS=src/lightsaber.h src/debug.h $(SORTDEPS)
 #DEPS=$(patsubst %,$(IDIR)/%, $(_DEPS))
@@ -14,7 +17,8 @@ OBJ=src/main.c \
 		src/debug.c \
 		src/sorting/insertion.o \
 		src/sorting/merge.o \
-		src/sorting/bubble.o
+		src/sorting/bubble.o \
+		src/sorting/heap.o
 #OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 %.o: %.c $(DEPS)

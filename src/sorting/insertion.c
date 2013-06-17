@@ -7,9 +7,9 @@ int * insertion_sort(int * array, int array_len)
   printf("\ninsertion_sort\n");
   printf("==============\n");
 
-  if (array_len <= 2) return array;
+  if (array_len <= 1) return array;
 
-  for (i = 2; i < array_len; i++)
+  for (i = 1; i < array_len; i++)
   {
     int key = array[i];
     j = i -1;
