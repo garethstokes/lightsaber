@@ -15,17 +15,16 @@ int main() {
     params
       1) the unsorted array
       2) the length of array
-  */
     insertion_sort(numbers, 9); 
+  */
   /* merge_sort(numbers, 9, 0, 8); */
   /* bubble_sort( numbers, 9 ); */
 
   /* params
       1) the unsorted array
       2) the length of the array
-      3) the size of the heap
-  heap_sort( numbers, 9, 9 );
   */
+  heap_sort( numbers, 9 );
 
   return(0);
 }
